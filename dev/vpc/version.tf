@@ -7,14 +7,14 @@ terraform {
     }
   }
   backend "s3" {
-    bucket         = "my-terraform-state-bucket-dev-1"
-    key            = "terraform.tfstate"
-    region         = "ap-south-1"
-    use_lockfile    = true
-    encrypt        = true
+    bucket       = "my-terraform-state-bucket-dev-1"
+    key          = "terraform.tfstate"
+    region       = "ap-south-1"
+    use_lockfile = true
+    encrypt      = true
   }
-  
-  
+
+
 }
 
 provider "aws" {
