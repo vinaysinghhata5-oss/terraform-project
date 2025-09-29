@@ -6,13 +6,13 @@ terraform {
       version = "~> 4.0"
     }
   }
-  backend "s3" {
-    bucket       = "my-terraform-state-bucket-dev-1"
-    key          = "terraform.tfstate"
-    region       = "ap-south-1"
-    use_lockfile = true
-    encrypt      = true
-  }
+#  backend "s3" {
+#    bucket       = "my-terraform-state-bucket-dev-1"
+#    key          = "root/terraform.tfstate"
+#    region       = "ap-south-1"
+#    use_lockfile = true
+#    encrypt      = true
+#  }
 
 
 }
