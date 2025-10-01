@@ -24,7 +24,13 @@ resource "aws_eks_addon" "aws_ebs_csi_driver" {
   addon_version    = "v1.48.0-eksbuild.2"
     resolve_conflicts = "OVERWRITE"
     service_account_role_arn = aws_iam_role.eks_addon_role.arn 
-    depends_on = [aws_eks_cluster.eks_cluster]
+    depends_on = [
+      aws_eks_cluster.eks_cluster
+      aws_eks_node_group.dev-group
+      ]
+   
 }
+
+
 
 

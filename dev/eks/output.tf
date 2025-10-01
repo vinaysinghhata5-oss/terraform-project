@@ -35,3 +35,11 @@ output "nat_gateway_ids" {
 output "internet_gateway_ids" {
   value = module.vpc.internet_gateway_ids
 }
+
+output "clsuter_oidc" {
+  value = aws_eks_cluster.eks_cluster.identity[0].oidc[0].issuer
+}
+
+output "lbc_iam_policy_arn" {
+   value = aws_iam_policy.lbc_iam_policy.arn
+ }
