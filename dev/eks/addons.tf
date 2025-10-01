@@ -27,3 +27,4 @@ resource "aws_eks_addon" "aws_ebs_csi_driver" {
     depends_on = [aws_eks_cluster.eks_cluster]
 }
 
+
